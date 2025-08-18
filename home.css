@@ -253,3 +253,127 @@ body {
     max-width: 100px;
   }
 }
+
+.cart-tab .cart-items {
+  overflow-y: auto;
+  flex-grow: 1;
+  margin-bottom: 20px;
+}
+.cart-tab .cart-items .item {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+}
+.cart-tab .cart-items .item:last-child {
+  border-bottom: none;
+}
+.cart-tab .cart-items .item h2 {
+  font-size: 1.1em;
+  color: black;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+.cart-tab .cart-items .item p {
+  font-size: 0.9em;
+  color: #555;
+  margin: 0;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+}
+.cart-tab .cart-items .item button {
+  background-color: darkcyan;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 12px;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+.cart-tab .cart-items .item button:hover {
+  background-color: darkgray;
+}
+.cart-tab .cart-items .item .image {
+  flex-shrink: 0;
+}
+
+.cart-tab .cart-items .item .image img {
+  width: 50px;
+  height: 50px;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+
+.cart-tab .cart-items .item .quantity {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.cart-tab .cart-items .item .quantity input {
+  width: 50px;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 12px;
+}
+.cart-tab .cart-items .item .quantity button {
+  background-color: darkcyan;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 12px;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+.cart-tab .cart-items .item .quantity button:hover {
+  background-color: darkgray;
+}
+.cart-tab .cart-items .item .total {
+  font-weight: bold;
+  color: black;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+
+.cart-tab .cart-items .item .total span {
+  color: indianred;
+  font-size: 1.2em;
+}
+.cart-tab .cart-items .item .total span::before {
+  content: "$";
+}
+.cart-tab .cart-items .item .total span::after {
+  content: " USD";
+}
+
+.cart-tab .cart-items .item .remove {
+  background-color: indianred;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 12px;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+.cart-tab .cart-items .item .remove:hover {
+  background-color: darkgray;
+}
+.cart-tab .cart-items .item .remove:focus {
+  outline: none;
+  box-shadow: 0 0 5px darkcyan;
+}
+.cart-tab .cart-items .item .remove:active {
+  background-color: indianred;
+  transform: scale(0.95);
+}
+.cart-tab .cart-items .item .remove:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+.cart-tab .cart-items .item .remove:disabled:hover {
+  background-color: #ccc;
+}
+.cart-tab .cart-items .item .remove:disabled:focus {
+  box-shadow: none;
+}

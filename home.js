@@ -91,3 +91,24 @@ document.addEventListener("DOMContentLoaded", () => {
     }, index * 150);
   });
 });
+
+// CSS for slide-in animation
+const style = document.createElement("style");
+style.textContent = `
+  .product.slide-in {
+    animation: slideIn 0.5s forwards;
+  }
+
+  @keyframes slideIn {
+    from {
+      transform: translateY(20px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+`;
+document.head.appendChild(style);
+// End of home.js
